@@ -27,35 +27,6 @@
 
 	<script type="text/javascript">
 
-	window.onload = function(){
-		prepareGallery();
-	}
-
-	function prepareGallery() {
-		var gallery = document.getElementById("imageGallery");
-		var links = gallery.getElementsByTagName("a");
-
-		for ( var i=0; i < links.length; i++) {
-			links[i].onclick = function(){
-				showPicOne(this);
-				return false;
-			}
-
-		}
-
-		
-	}
-
-	function showPicOne(whichpic) {
-
-		var source = whichpic.getAttribute("href");
-		var placeholder = document.getElementById("placeholder");
-		placeholder.setAttribute("src",source);
-
-		var text = whichpic.getAttribute("title");
-		var description = document.getElementById("description");
-		description.firstChild.nodeValue = text;
-	}
 
 	</script>
 
